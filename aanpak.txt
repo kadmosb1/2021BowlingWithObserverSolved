@@ -1,0 +1,9 @@
+- Trek Bowling.java en het startscherm uit elkaar (single responsibility)
+- Maak van Lane een Observable. Als occupied verandert, moet je natuurlijk wel:
+    - met setChanged aangeven dat je Lane veranderd is;
+    - en met notifyObservers aangeven dat de observers worden geïnformeerd.
+    - om dit goed te implementeren, moet natuurlijk in de constructor ook setOccupied worden aangeroepen.
+- Maak van Status een Observer. Als een statusscherm geopend of gesloten wordt, moet het volgende gebeuren:
+    - Bij sluiten moeten de observers uit de lijst met observers van Lane verwijderd worden.
+    - Bij het aanmaken van een scherm wordt het statusscherm als Observer toegevoegd aan alle bestaande Lanes (Observables).
+    - De overridden methode update zorgt ervoor dat het statusscherm opnieuw wordt getekend.
