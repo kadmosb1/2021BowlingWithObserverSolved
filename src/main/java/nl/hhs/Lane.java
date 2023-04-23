@@ -1,10 +1,8 @@
 package nl.hhs;
 
-import java.util.Observable;
-
 public class Lane extends Observable {
 
-	private int number;
+	private final int number;
 	private boolean occupied;
 
 	public Lane (int number) {
