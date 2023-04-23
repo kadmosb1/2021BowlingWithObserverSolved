@@ -11,13 +11,10 @@ import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import javafx.stage.WindowEvent;
 
-import java.util.Observable;
-import java.util.Observer;
-
 class EventHandlerToggle implements EventHandler<ActionEvent> {
 
-	private Lane lane;
-	private Status status;
+	private final Lane lane;
+	private final Status status;
 
 	public EventHandlerToggle (Lane lane, Status status) {
 		this.lane = lane;
@@ -33,8 +30,8 @@ class EventHandlerToggle implements EventHandler<ActionEvent> {
 
 class EventHandlerClose implements EventHandler<WindowEvent> {
 
-	private Bowling bowling;
-	private Status status;
+	private final Bowling bowling;
+	private final Status status;
 
 	public EventHandlerClose (Bowling bowling, Status status) {
 		this.bowling = bowling;
@@ -50,10 +47,10 @@ class EventHandlerClose implements EventHandler<WindowEvent> {
 	}
 }
 
-public class Status extends Stage implements Observer
+public class Status extends Stage implements IObserver
 {
-	private Bowling bowling;
-	private Pane rootPane;
+	private final Bowling bowling;
+	private final Pane rootPane;
 
 	public Status (Bowling bowling) {
 
